@@ -1,0 +1,71 @@
+/* notice */
+.sec_notice {
+    @include vw-pc(padding, 45 0); background: #191919;
+
+    .sec_area {@include vw-pc(max-width, 1440); margin: 0 auto; text-align: left;}
+    .notice_area {
+        position: relative; @include vw-pc(padding, 50 30); border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        &:last-child {border-bottom: none;}
+
+        .notice_tit {display: block; @include vw-pc(margin-bottom, 40); @include vw-pc(font-size, 22); font-weight: 700; color: #fff;}
+        .notice_list {
+            color: rgba(255, 255, 255, 0.4);
+
+            li {
+                position: relative; @include vw-pc(padding, 0 0 10 20); @include vw-pc(font-size, 18);
+                a {color: rgba(255, 255, 255, 0.3);}
+            }
+
+            &.bullet-none { 
+                li {
+                    padding-left: 0;
+                    &:before {display: none;}
+                }
+            }
+
+            &.list_1depth li:before {content: ''; position: absolute; left: 0; @include vw-pc(top, 9); @include vw-pc(width, 4); @include vw-pc(height, 4); border-radius: 50%; background-color: #888;}
+
+            .list_2depth { 
+                li {
+                    @include vw-pc(padding-left, 27);
+                    &:before {display: none;}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec_notice {
+        @include vw-mo(padding, 20 0);
+        
+        .sec_area {@include vw-mo(width, 640);}
+        .notice_area {
+            @include vw-mo(padding, 80 0);
+
+            .notice_tit {@include vw-mo(margin-bottom, 36); @include vw-mo(font-size, 28);}
+            .notice_list {
+                li {
+                    @include vw-mo(padding, 0 0 21 16); @include vw-mo(font-size, 26); @include vw-mo(line-height, 32); word-break: auto-phrase;
+                    &:last-child {padding-bottom: 0;}
+                }
+
+                &.list_1depth li:before {left: 0; @include vw-mo(top, 12); @include vw-mo(width, 4); @include vw-mo(height, 4);}
+
+                .list-inner {
+                    @include vw-mo(padding-left, 31);
+                }
+
+                .list-space {@include vw-mo(letter-spacing, -1.7);}
+
+                .list_2depth { 
+                    li {
+                        @include vw-mo(padding, 0 0 16 37);
+                        &:before {display: none;}
+                    }
+                }
+            }
+        }
+    }
+}

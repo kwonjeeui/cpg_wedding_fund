@@ -1,0 +1,163 @@
+.wedding_fund { 
+    .sec_event {
+        @include vw-pc(padding, 140 0); background: #fff;
+
+        .sec_title {
+            @include vw-pc(margin-bottom, 60);
+
+            &__logo {@include vw-pc(margin-bottom, 15);}
+        }
+
+        .pt_event {
+            display: flex; justify-content: center; @include vw-pc(gap, 50); @include vw-pc(margin-bottom, 80);
+
+            &__slide {
+                @include vw-pc(width, 550);
+
+                .pt_tab {
+                    @include vw-pc(padding-top, 30);
+                    
+                    &__list {display: flex; @include vw-pc(margin-bottom, 60);}
+                    &__item {
+                        flex: 1; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #bbb; @include vw-pc(height, 55); @include vw-pc(font-size, 26); font-weight: 700; color: #999;
+
+                        &.active {@include vw-pc(border-bottom, 4 solid #139ded); color: #139ded;}
+                    }
+                }
+            }
+            &__content {@include vw-pc(width, 426);}
+            &__msg {@include vw-pc(margin-bottom, 40); @include vw-pc(font-size, 24); font-weight: 700; @include vw-pc(line-height, 32); color: #1a1a1a;}
+        }
+
+        .hashtag_box {
+            display: flex; justify-content: space-between; flex-direction: column; @include vw-pc(width, 426); @include vw-pc(height, 160); @include vw-pc(font-size, 20); border: 1px solid #139ded; @include vw-pc(border-radius, 20); overflow: hidden;
+
+            .hashtag_txt {align-self: center; @include vw-pc(padding-top, 30); font-weight: 400; color: #333;}
+            .btn_copy {@include vw-pc(padding-top, 20); width: 100%; @include vw-pc(height, 57); text-align: center; font-weight: 700; @include vw-pc(letter-spacing, 1); color: #fff; background-color: #139ded;}
+        }
+
+        .info_table {
+            display: flex; flex-flow: column; @include vw-pc(gap, 20); @include vw-pc(margin-bottom, 30);
+
+            &__tr {display: flex; align-items: baseline; @include vw-pc(gap, 30);}
+            &__th {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(border-radius, 100); @include vw-pc(border, 1 solid #139ded); @include vw-pc(width, 145); @include vw-pc(height, 38); @include vw-pc(font-size, 20); font-weight: 700; color: #139ded;}
+            &__td {
+                @include vw-pc(font-size, 18); color: #666; @include vw-pc(line-height, 22);
+
+                &.table_noti {display: flex; align-items: center;}
+            }
+            &__dis {@include vw-pc(margin-left, 10); @include vw-pc(font-size, 18); color: #999;}
+            &.color_grey {
+                @include vw-pc(margin-bottom, 40);
+                .info_table__th {@include vw-pc(border, 1 solid #666); color: #2a2a2a;}
+            }
+        }
+        .swiper_set {
+            position: relative; z-index: 0;
+            .main_swiper {
+                position: relative; @include vw-pc(width, 300); @include vw-pc(margin, 0 auto 60);
+
+                .swiper-slide {
+                    @include vw-pc(width, 300); @include vw-pc(height, 284); @include vw-pc(border-radius, 20); overflow: hidden;
+                    img {height: inherit;}
+                }
+                .swiper-button-prev, .swiper-button-next {
+                    top: 0; @include vw-pc(margin-top, 130);
+
+                    &:after {display: none;}
+                }
+
+                .swiper-button-prev {@include vw-pc(left, -55); @include vw-pc(width, 15); @include vw-pc(height, 26); background: center/cover no-repeat url('../../is/images/event/wf_event_slide_prev_btn_pc.png');}
+                .swiper-button-next {@include vw-pc(right, -55); @include vw-pc(width, 15); @include vw-pc(height, 26); background: center/cover no-repeat url('../../is/images/event/wf_event_slide_next_btn_pc.png');}
+            }
+
+            .sub_swiper {
+                @include vw-pc(width, 550); margin: 0 auto; overflow: hidden;
+
+                .swiper-slide {
+                    @include vw-pc(width, 130); @include vw-pc(height, 123); @include vw-pc(border-radius, 10); @include vw-pc(margin-right, 10); overflow: hidden; cursor: pointer;
+                    img {height: inherit;}
+
+                    &:last-child {margin-right: 0;}
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wedding_fund {
+        .sec_event {
+            @include vw-mo(padding, 140 0);
+    
+            .sec_title {
+                margin: 0;
+
+                &__logo {@include vw-mo(margin-bottom, 20);}
+                &__text {@include vw-mo(padding-bottom, 227);}
+            }
+    
+            .pt_event {
+                display: block; @include vw-mo(margin-bottom, 80); padding-left: 0;
+
+                &__slide {
+                    @include vw-mo(width, 556); margin: 0 auto;
+
+                    .pt_tab {
+                        padding: 0; @include vw-mo(margin-bottom, 80);
+
+                        &__list {display: flex; @include vw-mo(margin-bottom, 70);}
+                        &__item {
+                            flex: 1; @include vw-mo(height, 70); @include vw-mo(font-size, 34);
+
+                            &.active {@include vw-mo(border-bottom, 10 solid #139ded);}
+                        }
+                    }
+                }
+                &__content {width: 100%; padding: 0; text-align: center;}
+                &__msg {position: absolute; @include vw-mo(top, 216); left: 50%; transform: translateX(-50%); width: 100%; margin: 0; text-align: center; @include vw-mo(font-size, 38); @include vw-mo(line-height, 43); font-weight: 700;}
+            }
+
+            .hashtag_box {
+                flex-direction: row; @include vw-mo(width, 640); @include vw-mo(height, 234); @include vw-mo(border-radius, 30); margin: 0 auto; @include vw-mo(font-size, 32); @include vw-mo(line-height, 42);
+
+                .hashtag_txt {@include vw-mo(padding-left, 42); padding-top: 0; text-align: left;}
+                .btn_copy {@include vw-mo(padding-top, 84); @include vw-mo(width, 230); height: 100%; @include vw-mo(letter-spacing, 1);}
+            }
+
+            .info_table {
+                display: block; width: 100%; margin: 0 auto; text-align: center;
+
+                &__tr {display: block; @include vw-mo(margin-bottom, 60);}
+                &__th {display: flex; justify-content: center; align-items: center; @include vw-mo(border-radius, 30); @include vw-mo(border, 1 solid #139ded); @include vw-mo(width, 210); @include vw-mo(height, 61); @include vw-mo(margin, 0 auto 21); @include vw-mo(font-size, 30); color: #139ded;}
+                &__td {
+                    width: auto; @include vw-mo(font-size, 32); @include vw-mo(line-height, 40);
+
+                    &.table_noti {justify-content: center;}
+                }
+                &__dis {@include vw-mo(margin-left, 14); @include vw-mo(font-size, 24);}
+                &.color_grey {
+                    margin: 0;
+
+                    .info_table__th {@include vw-mo(border, 1 solid #666);}
+                }
+            }
+
+            .swiper_set {
+                .main_swiper {
+                    @include vw-mo(width, 557); @include vw-mo(margin, 0 auto 70);
+    
+                    .swiper-slide {@include vw-mo(width, 557); @include vw-mo(height, 527); @include vw-mo(border-radius, 20);}
+                    .swiper-button-prev, .swiper-button-next {@include vw-mo(margin-top, 228);}
+                    .swiper-button-prev {@include vw-mo(left, -52); @include vw-mo(width, 34); @include vw-mo(height, 64); background: center/cover no-repeat url('../../is/images/event/wf_event_slide_prev_btn_mo.png');}
+                    .swiper-button-next {@include vw-mo(right, -52); @include vw-mo(width, 34); @include vw-mo(height, 64); background: center/cover no-repeat url('../../is/images/event/wf_event_slide_next_btn_mo.png');}
+                }
+    
+                .sub_swiper {
+                    @include vw-mo(width, 557);
+                    .swiper-slide {@include vw-mo(width, 130); @include vw-mo(height, 123); @include vw-mo(border-radius, 10); @include vw-mo(margin-right, 12);}
+                }
+            }
+        }
+    }
+}

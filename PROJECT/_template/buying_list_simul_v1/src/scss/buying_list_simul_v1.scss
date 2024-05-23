@@ -1,0 +1,11 @@
+@import '../../../../../scss_global/scss-common2';
+@import 'bs_reset';
+@import 'buying';
+@import 'simulator';
+@import 'monospace';
+
+.buying_list_simul_v1 {}
+
+@media screen and (max-width: 768px) {
+    .buying_list_simul_v1 {}
+}

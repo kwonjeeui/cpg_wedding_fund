@@ -1,0 +1,93 @@
+.sec_buying {
+    .pt_category {
+        &__slide {}
+        &__list {}
+        &__item {width: max-content; @include vw-pc(margin-right, 8);
+            &.pt_active .pt_btn--category {color: #fff; background-color: #000; border-color: #000;}
+            &:last-child {margin-right: 0;}
+        }
+        .pt_btn {display: flex; justify-content: center; align-items: center;
+            &--category {@include vw-pc(padding, 16 26); @include vw-pc(font-size, 18); @include vw-pc(border, 2 solid #B2B2B2); @include vw-pc(border-radius, 30);}
+        }
+    }
+    .pt_buying {
+        &__wrap {display: flex; justify-content: space-between; @include vw-pc(width, 1320); @include vw-pc(margin, 0 auto 40);}
+        &__list {display: flex; flex-wrap: wrap; @include vw-pc(gap, 25); @include vw-pc(width, 986);
+            .pt_prd {flex-shrink: 0; @include vw-pc(width, 312); @include vw-pc(padding-bottom, 20); @include vw-pc(border-radius, 10); background-color: #fff; @include vw-pc(box-shadow, 4 4 25 #0000001F);
+                &__top {position: relative; display: flex; justify-content: center; align-items: center; @include vw-pc(height, 54); background-color: #D9E5FF; @include vw-pc(border-radius, 10 10 0 0);}
+                &__content {}
+                &__bottom {@include vw-pc(padding, 0 30);}
+                &__img {@include vw-pc(margin-bottom, 16); @include vw-pc(height, 168);
+                    img {height: 100%; object-fit: contain;}
+                }
+                &__name {@include vw-pc(min-height, 54); @include vw-pc(margin-bottom, 8); @include vw-pc(font-size, 20); font-weight: 700; @include vw-pc(line-height, 27); text-align: center;}
+                &__sku {@include vw-pc(margin-bottom, 14); @include vw-pc(font-size, 13); text-align: center; color: #5B5B5B;}
+                &__price-box {@include vw-pc(margin-bottom, 10);}
+                &__price {display: flex; justify-content: space-between;
+                    .pt_txt {@include vw-pc(line-height, 26);}
+                }
+            }
+            .pt_benefit {z-index: 10; position: absolute; left: 0; top: 100%; display: none; width: 100%; @include vw-pc(padding, 12 15 16); background-color: #D9E5FF;
+                &__item {display: flex; justify-content: space-between;}
+                &__title {@include vw-pc(font-size, 16); line-height: 1.7;}
+                &__desc {@include vw-pc(font-size, 16); font-weight: 700; line-height: 1.7;}
+            }
+            .pt_btn-box {display: flex; justify-content: space-between; align-items: center;}
+            .pt_btn {
+                &--benefit {width: 100%; height: 100%;
+                    &.pt_active + .pt_benefit {display: block;}
+                }
+                &--coupon {width: 100%; @include vw-pc(height, 34); @include vw-pc(margin-bottom, 10); @include vw-pc(font-size, 16); font-weight: 700; @include vw-pc(border, 2 solid #0434D8); @include vw-pc(border-radius, 5);}
+                &--detail {@include vw-pc(font-size, 16); font-weight: 700; line-height: 1.3; @include vw-pc(border-bottom, 2 solid #000);}
+                &--buy {@include vw-pc(width, 134); @include vw-pc(height, 37); @include vw-pc(font-size, 16); font-weight: 700; color: #fff; background-color: #000; @include vw-pc(border-radius, 18);}
+                &--cart {position: absolute; top: 0; right: 0; @include vw-pc(width, 36); @include vw-pc(height, 36); background-color: #aaa;
+                    &.pt_active {background-color: #000;}
+                }
+                &--large {width: 100%;}
+                &--prev {@include vw-pc(left, -28);
+                    &::after {@include vw-pc(font-size, 12); font-weight: 700; color: #000;}
+                }
+                &--next {@include vw-pc(right, -28);
+                    &::after {@include vw-pc(font-size, 12); font-weight: 700; color: #000;;}
+                }
+            }
+            .pt_opt {display: flex; flex-direction: column; @include vw-pc(gap, 10); @include vw-pc(height, 82); @include vw-pc(padding, 0 65); @include vw-pc(margin-bottom, 25);
+                &__list {display: flex;
+                    &--color {@include vw-pc(margin-bottom, 3);}
+                }
+                &__item {
+                    &--color {display: inline-flex; align-items: center; @include vw-pc(width, 22); @include vw-pc(height, 22); @include vw-pc(padding-left, 3); @include vw-pc(margin-right, 10);
+                        label {position: relative; @include vw-pc(width, 16); @include vw-pc(height, 16); border: 1px solid #D0D0D0; border-radius: 50%;}
+                        input[type=radio]:checked + label::before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: block; @include vw-pc(width, 22); @include vw-pc(height, 22); @include vw-pc(border, 1 solid #000); border-radius: 50%; box-sizing: border-box;}
+                        input[type=radio]:focus + label::before {outline: dashed 2px #2189ff !important;}
+                    }
+                    &--btn {width: max-content; @include vw-pc(margin-right, 5);
+                        label {@include vw-pc(padding, 4 12); @include vw-pc(font-size, 13); font-weight: 700; border: 1px solid #D0D0D0; @include vw-pc(border-radius, 13);}
+                        input[type=radio]:checked + label {color: #fff; background-color: #000; border-color: #000;}
+                        input[type=radio]:focus + label {outline: dashed 2px #2189ff !important;}
+                    }
+                    &:last-child {margin-right: 0;}
+                }
+                &__slide {position: relative; width: 100%;}
+                [data-buying-option-slider] {position: static;}
+                .slide_lockd {
+                    .pt_opt__list{justify-content:center;}
+                    .pt_btn--prev,
+                    .pt_btn--next {display: none;}
+                }
+                input[type=radio] {position: absolute!important; width: 1px!important; height: 1px!important; padding: 0!important; margin: -1px!important; overflow: hidden!important; clip: rect(0,0,0,0)!important; white-space: nowrap!important; border: 0!important;}
+                label {display: inline-block; cursor: pointer;}
+            }
+            .pt_discount {}
+            .pt_disabled {opacity: .3; pointer-events: none;}
+        }
+        .pt_btn {display: flex; justify-content: center; align-items: center;
+            &--more {@include vw-pc(gap, 3); @include vw-pc(width, 164); @include vw-pc(height, 50); margin: 0 auto; @include vw-pc(font-size, 18); border: 1px solid #000; @include vw-pc(border-radius, 44);}
+        }
+        .pt_highlight {color: #0434D8;}
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec_buying {}
+}
