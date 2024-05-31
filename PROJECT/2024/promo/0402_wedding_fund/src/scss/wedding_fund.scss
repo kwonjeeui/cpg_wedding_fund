@@ -1,8 +1,9 @@
 @import '../../../../../../scss_global/scss-common2';
 @import 'bs_reset';
 @import 'sec_kv';
-@import 'sec_event';
 @import 'sec_funding';
+@import 'sec_event';
+@import 'sec_event_02';
 @import 'sec_notice';
 
 .wedding_fund {
@@ -21,11 +22,12 @@
         text-align: center;
 
         &__logo {@include vw-pc(width, 311); @include vw-pc(height, 97); margin: 0 auto;}
-        &__text {@include vw-pc(margin-bottom, 16); @include vw-pc(font-size, 35); color: #139ded; letter-spacing: 0;}
+        &__text {@include vw-pc(margin-bottom, 16); @include vw-pc(font-size, 35); letter-spacing: 0; font-weight: 700;}
         &__text-ico {
             display: inline-block; position: relative; @include vw-pc(padding-left, 65); color: #fff;
             &::before {content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); @include vw-pc(width, 55); @include vw-pc(height, 60); background-size: 100%; background-image: url('../../is/images/wf_box_icon.png'); background-position: left top; background-repeat: no-repeat;}
         }
+        &__text-blue {margin-bottom: 0; @include vw-pc(font-size, 42); color: #139ded; }
         &__desc {@include vw-pc(font-size, 32); @include vw-pc(line-height, 39); color: #fefefe; font-weight: 400; letter-spacing: -0.01em;}
     }
 
@@ -43,6 +45,7 @@
                 @include vw-mo(padding-left, 60);
                 &::before {@include vw-mo(width, 55); @include vw-mo(height, 60);}
             }
+            &__text-blue {@include vw-mo(margin-bottom, 33); @include vw-mo(font-size, 48); letter-spacing: -.025em;}
             &__desc {@include vw-mo(margin-left, 0); @include vw-mo(font-size, 30);  @include vw-mo(line-height, 36); letter-spacing: 0;}
         }
     }

@@ -1,0 +1,90 @@
+.wedding_fund { 
+    .sec_event_02 {
+        @include vw-pc(padding, 140 0); background: #f1f1f1;
+
+        .sec_title {
+            @include vw-pc(margin-bottom, 40);
+
+            &__logo {@include vw-pc(margin-bottom, 15);}
+        }
+
+        .pt_event {
+            position: relative;
+            &__msg {@include vw-pc(margin-bottom, 57); @include vw-pc(font-size, 24); font-weight: 700; @include vw-pc(line-height, 32); letter-spacing: -.025em; text-align: center; color: #666;}
+            &__content {@include vw-pc(margin-bottom, 70);}
+            &::before{content: ''; position: absolute; @include vw-pc(top, 150); @include vw-pc(right, 398); @include vw-pc(width, 106); @include vw-pc(height, 115); background: url(../../is/images/event/wf_wedding_event02_pc.png) no-repeat center/contain;}
+        }
+
+        .hashtag_box {
+            display: flex; justify-content: flex-start; @include vw-pc(width, 640); @include vw-pc(height, 90); @include vw-pc(margin-top, 10); background-color: #fff; border: 1px solid #139ded; @include vw-pc(border-radius, 20); overflow: hidden; @include vw-pc(font-size, 20);
+
+            .btn_copy {@include vw-pc(width, 206); @include vw-pc(height, 90); text-align: center; @include vw-pc(line-height, 90); font-weight: 700; color: #fff; background-color: #139ded;}
+            .hashtag_txt {@include vw-pc(padding-left, 29); align-self: center; font-weight: 400; @include vw-pc(line-height, 24); color: #333;}
+        }
+
+        .info_table {
+            display: flex; flex-direction: column; align-items: flex-start; @include vw-pc(gap, 20); @include vw-pc(padding-left, 400);
+
+            &__tr {display: flex; align-items: baseline; @include vw-pc(gap, 30);}
+            &__th {display: inline-flex; justify-content: center; align-items: center; background-color: #fff; @include vw-pc(border-radius, 100); @include vw-pc(border, 1 solid #139ded); @include vw-pc(width, 145); @include vw-pc(height, 38); @include vw-pc(font-size, 18); font-weight: 700; color: #139ded;}
+            &__td {
+                @include vw-pc(font-size, 18); color: #666; @include vw-pc(line-height, 22);
+
+                &.table_noti {display: flex; align-items: center; letter-spacing: 0;}
+            }
+            &__dis {@include vw-pc(margin-left, 10); @include vw-pc(font-size, 16); color: #999;}
+            &.color_grey {
+                @include vw-pc(margin-bottom, 40);
+                .info_table__th {@include vw-pc(border, 1 solid #666); color: #2a2a2a;}
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wedding_fund {
+        .sec_event_02 {
+            @include vw-mo(padding, 140 0);
+    
+            .sec_title {
+                margin: 0;
+
+                &__logo {@include vw-mo(margin-bottom, 20);}
+                &__text {@include vw-mo(padding-bottom, 0);}
+            }
+    
+            .pt_event {
+                &__msg {width: 100%; @include vw-mo(margin, 0 auto 74); text-align: center; @include vw-mo(font-size, 38); @include vw-mo(line-height, 44); font-weight: 700;}
+                &__content {@include vw-mo(margin-bottom, 79);}
+                &::before {display: none;}
+            }
+
+            .hashtag_box {
+                flex-direction: row-reverse; @include vw-mo(width, 640); @include vw-mo(height, 234); @include vw-mo(margin, 0 auto 60); @include vw-mo(border-radius, 30); @include vw-mo(font-size, 32); @include vw-mo(line-height, 42);
+
+                .btn_copy {@include vw-mo(width, 230); height: 100%; align-content: center;}
+                .hashtag_txt {padding: 0; @include vw-mo(margin-right, 63); text-align: left; @include vw-mo(line-height, 42);}
+            }
+
+            .info_table {
+                display: block; width: 100%; margin: 0 auto; text-align: center; padding-left: 0;
+
+                &__tr {display: block; @include vw-mo(margin-bottom, 52);}
+                &__tr:last-child {@include vw-mo(margin-bottom, 32);}
+                &__th {display: flex; justify-content: center; align-items: center; @include vw-mo(border-radius, 30); @include vw-mo(border, 1 solid #139ded); @include vw-mo(width, 210); @include vw-mo(height, 61); @include vw-mo(margin, 0 auto 21); @include vw-mo(font-size, 30); color: #139ded;}
+                &__td {
+                    width: auto; @include vw-mo(font-size, 32); @include vw-mo(line-height, 40);
+
+                    &.table_noti {justify-content: center;}
+                }
+                &__dis {@include vw-mo(margin-left, 14); @include vw-mo(font-size, 24);}
+                &.color_grey {
+                    margin: 0;
+
+                    .info_table__th {@include vw-mo(border, 1 solid #666);}
+                }
+            }
+            .info_img {@include vw-mo(width, 279); @include vw-mo(margin, 0 auto 58);}
+        }
+    }
+}

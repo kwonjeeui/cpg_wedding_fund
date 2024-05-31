@@ -37,7 +37,7 @@
             <div class="sec_title__text sec_title__text-ico">받고 싶은 선물을 골라보세요!</div>
             <p class="sec_title__desc">
                 갖고 싶은 제품 이미지를 눌러서 정보를 확인하고,<br>
-                <strong>분할결제 서비스 신청하기</strong>와 함께 장바구니에 담아보세요.</p>
+                <strong>기프트 펀딩 신청하기</strong>와 함께 장바구니에 담아보세요.</p>
         </h2>
         <div class="pt_gift">
             <ul class="pt_gift__list">

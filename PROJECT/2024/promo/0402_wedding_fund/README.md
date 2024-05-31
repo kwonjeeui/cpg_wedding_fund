@@ -99,3 +99,14 @@
   - 권제의, 황창환, 유태헌
   - T20240521000016 / https://www.samsung.com/sec/display/preview/364964/
   - 앵커 url 생성
+
+- 24/05/27
+  - 권제의
+  - T20240527000006 / https://www.samsung.com/sec/display/preview/365629/
+  - 텍스트 수정 (분할결제 서비스 신청하기 -> 기프트 펀딩 신청하기)
+
+- 24/05/30
+  - 홍성욱, 권제의
+  - T20240530000014 / https://www.samsung.com/sec/display/preview/366330/
+  - 구매인증 이벤트 영역 추가
+  - 이벤트 번호: 33084

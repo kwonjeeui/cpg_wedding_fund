@@ -40,13 +40,13 @@
             display: flex; flex-flow: column; @include vw-pc(gap, 20); @include vw-pc(margin-bottom, 30);
 
             &__tr {display: flex; align-items: baseline; @include vw-pc(gap, 30);}
-            &__th {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(border-radius, 100); @include vw-pc(border, 1 solid #139ded); @include vw-pc(width, 145); @include vw-pc(height, 38); @include vw-pc(font-size, 20); font-weight: 700; color: #139ded;}
+            &__th {display: inline-flex; justify-content: center; align-items: center; @include vw-pc(border-radius, 100); @include vw-pc(border, 1 solid #139ded); @include vw-pc(width, 145); @include vw-pc(height, 38); @include vw-pc(font-size, 18); font-weight: 700; color: #139ded;}
             &__td {
                 @include vw-pc(font-size, 18); color: #666; @include vw-pc(line-height, 22);
 
                 &.table_noti {display: flex; align-items: center;}
             }
-            &__dis {@include vw-pc(margin-left, 10); @include vw-pc(font-size, 18); color: #999;}
+            &__dis {@include vw-pc(margin-left, 10); @include vw-pc(font-size, 16); color: #999;}
             &.color_grey {
                 @include vw-pc(margin-bottom, 40);
                 .info_table__th {@include vw-pc(border, 1 solid #666); color: #2a2a2a;}
