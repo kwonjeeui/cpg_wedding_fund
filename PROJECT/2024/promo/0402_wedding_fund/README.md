@@ -110,3 +110,4 @@
   - T20240530000014 / https://www.samsung.com/sec/display/preview/366330/
   - 구매인증 이벤트 영역 추가
   - 이벤트 번호: 33084
+  - 유의사항 수정

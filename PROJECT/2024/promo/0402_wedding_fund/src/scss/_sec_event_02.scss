@@ -19,7 +19,7 @@
             display: flex; justify-content: flex-start; @include vw-pc(width, 640); @include vw-pc(height, 90); @include vw-pc(margin-top, 10); background-color: #fff; border: 1px solid #139ded; @include vw-pc(border-radius, 20); overflow: hidden; @include vw-pc(font-size, 20);
 
             .btn_copy {@include vw-pc(width, 206); @include vw-pc(height, 90); text-align: center; @include vw-pc(line-height, 90); font-weight: 700; color: #fff; background-color: #139ded;}
-            .hashtag_txt {@include vw-pc(padding-left, 29); align-self: center; font-weight: 400; @include vw-pc(line-height, 24); color: #333;}
+            .hashtag_txt {@include vw-pc(padding, 20 0 0 29); font-weight: 400; @include vw-pc(line-height, 24); color: #333;}
         }
 
         .info_table {
@@ -62,8 +62,8 @@
             .hashtag_box {
                 flex-direction: row-reverse; @include vw-mo(width, 640); @include vw-mo(height, 234); @include vw-mo(margin, 0 auto 60); @include vw-mo(border-radius, 30); @include vw-mo(font-size, 32); @include vw-mo(line-height, 42);
 
-                .btn_copy {@include vw-mo(width, 230); height: 100%; align-content: center;}
-                .hashtag_txt {padding: 0; @include vw-mo(margin-right, 63); text-align: left; @include vw-mo(line-height, 42);}
+                .btn_copy {@include vw-mo(width, 230); height: 100%; @include vw-mo(padding-top, 70);}
+                .hashtag_txt {@include vw-mo(padding, 32 0 0 0); @include vw-mo(margin-right, 63); text-align: left; @include vw-mo(line-height, 42);}
             }
 
             .info_table {
